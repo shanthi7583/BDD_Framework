@@ -36,34 +36,7 @@
 	   <groupId>org.codehaus.mojo</groupId>
 	   <artifactId>exec-maven-plugin</artifactId>
 	   <version>1.2.1</version>
-<executions>
-<execution>
-	   <phase>integration-phase</phase>
-	   <goals>
-	   <goal>java</goal>
-	   </goals> 
-	   <configuration>
-	   <executableDependency>
-	   <groupId>info.cukes</groupId>
-	   <artifactId>cucumber-core</artifactId>
-	   </executableDependency> 
-       <mainClass>cucumber.api.cli.Main</mainClass>
-	   <arguments>
-	   <argument>--format</argument>
-	   <argument>junit:target/cucumber-junit-report/allcukes.xml</argument>
-	   <argument>--format</argument>
-	   <argument>pretty</argument>
-	   <argument>--format</argument>
-	   <argument>html:target/cucumber-html-report</argument>
-	   <argument>--tags</argument>
-	   <argument>@login</argument>
-	   <argument>--glue</argument>
-	   <argument>com/</argument>
-	   <argument>src/</argument>
-	   </arguments>	
-	   </configuration>
-	   </execution>
-</executions>
+
 </plugin>
 </plugins>
  </build>
@@ -115,18 +88,7 @@
         <artifactId>commons-logging</artifactId>
         <version>1.1.1</version>
 </dependency>
-            <dependency>
-                <groupId>com.sun.mail</groupId>
-                <artifactId>javax.mail</artifactId>
-                <version>1.6.1</version>
-            </dependency>
- <dependency>
-    <groupId>geronimo-spec</groupId>
-    <artifactId>geronimo-spec-j2ee</artifactId>
-    <version>1.4-rc4</version>
-</dependency>
+
 <!-- https://mvnrepository.com/artifact/org.sikuli/sikuli-core -->
-
-
     </dependencies> 
 </project>
