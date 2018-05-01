@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?><testsuite failures="0" tests="2">
+<testcase classname="Logging into Salesforce" name="Logging in Salesforce_2" time="0">
+<skipped><![CDATA[Given I go to "loginURL" on "Chrome"....................................................undefined
+And I enter "loginusername" as "nikil.kaarthi@gmail.com"..........................................undefined
+And I enter "loginpassword" as "7@oracle"..................................................undefined
+And I click on "loginbutton"........................................................undefined
+Then login should be "success".......................................................undefined
+]]></skipped>
+</testcase>
+<testcase classname="Logging into Salesforce" name="Logging in Salesforce_1" time="0">
+<skipped><![CDATA[Given I go to "loginURL" on "mozilla"....................................................undefined
+And I enter "loginusername" as "nikil.kaarthi@gmail.com"..........................................undefined
+And I enter "loginpassword" as "7@oracle"..................................................undefined
+And I click on "loginbutton"........................................................undefined
+Then login should be "success".......................................................undefined
+]]></skipped>
+</testcase>
+</testsuite>
