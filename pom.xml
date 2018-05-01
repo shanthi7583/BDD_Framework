@@ -14,85 +14,43 @@
         <selenium.version>2.28.0</selenium.version>
         <junit.version>4.12</junit.version>
 </properties>
- <build>
- <testResources>
-        <testResource>
-        <directory>src/main/resources</directory>
-        <includes>
-        <include>log4j.properties</include>
-        </includes>
- </testResource>
-</testResources>
-    
-<plugins>
-<plugin>
-       <groupId>org.apache.maven.plugins</groupId>
-       <artifactId>maven-surefire-plugin</artifactId>
- <configuration>
-       <testFailureIgnore>true</testFailureIgnore>
- </configuration>
- </plugin>
- <plugin>
-	   <groupId>org.codehaus.mojo</groupId>
-	   <artifactId>exec-maven-plugin</artifactId>
-	   <version>1.2.1</version>
-<executions>
-<execution>
-	   <phase>integration-phase</phase>
-	   <goals>
-	   <goal>test-compile</goal>
-	   </goals> 
-	   <configuration>
-	   <executableDependency>
-	   <groupId>info.cukes</groupId>
-	   <artifactId>cucumber-core</artifactId>
-	   </executableDependency> 
-       <mainClass>cucumber.api.cli.Main</mainClass>
-	   <arguments>
-	   <argument>--format</argument>
-	   <argument>junit:target/cucumber-junit-report/allcukes.xml</argument>
-	   <argument>--format</argument>
-	   <argument>pretty</argument>
-	   <argument>--format</argument>
-	   <argument>html:target/cucumber-html-report</argument>
-	   <argument>--tags</argument>
-	   <argument>@login</argument>
-	   <argument>--glue</argument>
-	   <argument>com/</argument>
-	   <argument>src/</argument>
-	   </arguments>	
-	   </configuration>
-	   </execution>
-</executions>
-</plugin>
-</plugins>
- </build>
 <dependencies>      
 <dependency>
        <groupId>info.cukes</groupId>
-       <artifactId>cucumber-picocontainer</artifactId>
-       <version>${cucumber-jvm.version}</version>
+       <artifactId>cucumber-junit</artifactId>
+       <version>1.1.5</version>
 </dependency>
 <dependency>
        <groupId>info.cukes</groupId>
-       <artifactId>cucumber-junit</artifactId>
-       <version>${cucumber-jvm.version}</version>
+       <artifactId>cucumber-java</artifactId>
+       <version>1.1.5</version>
 </dependency>
 <dependency>
-        <groupId>org.seleniumhq.selenium</groupId>
-        <artifactId>selenium-java</artifactId>
-        <version>${selenium.version}</version>
+       <groupId>info.cukes</groupId>
+       <artifactId>cucumber-jvm</artifactId>
+       <version>1.1.5</version>
+</dependency>
+<dependency>
+       <groupId>info.cukes</groupId>
+       <artifactId>cucumber-jvm-deps</artifactId>
+       <version>1.0.5</version>
 </dependency>
 <dependency>
     	<groupId>net.masterthought</groupId>
-    	<artifactId>maven-cucumber-reporting</artifactId>
-    	<version>0.0.4</version>
+    	<artifactId>cucumber-reporting</artifactId>
+    	<version>1.0.0</version>
+    	<type>maven-plugin</type>
+</dependency>
+<dependency>
+    	<groupId>net.sourceforge.cobertura</groupId>
+    	<artifactId>cobertura</artifactId>
+    	<version>2.1.1</version>
     	<type>maven-plugin</type>
 </dependency>
 <dependency>     
         <groupId>org.seleniumhq.selenium</groupId>
-        <artifactId>selenium-support</artifactId>
-        <version>${selenium.version}</version>
+        <artifactId>selenium-java</artifactId>
+        <version>2.28.0</version>
 </dependency>
  <dependency>
         <groupId>junit</groupId>
@@ -100,24 +58,5 @@
         <version>4.11</version>
         <scope>test</scope>
 </dependency>
-<dependency>
-	    <groupId>org.testng</groupId>
-		<artifactId>testng</artifactId>
-		<version>6.1.1</version>
-</dependency>
-<dependency>
-		<groupId>log4j</groupId>
-		<artifactId>log4j</artifactId>
-		<version>1.2.14</version>
-</dependency>
-<dependency>
-		<groupId>commons-logging</groupId>
-        <artifactId>commons-logging</artifactId>
-        <version>1.1.1</version>
-</dependency>
-
-<!-- https://mvnrepository.com/artifact/org.sikuli/sikuli-core -->
-
-
     </dependencies> 
 </project>
